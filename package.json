@@ -1,0 +1,23 @@
+{
+  "name": "pago-cripto",
+  "version": "1.0.0",
+  "description": "app para recibir pagos en criptos",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "devjosnny",
+  "license": "ISC",
+  "dependencies": {
+    "coinbase-commerce-node": "^1.0.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
