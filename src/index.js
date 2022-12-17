@@ -37,7 +37,7 @@ app.get("/create-charge", async (req, res) => {
       customer_id: 'id_1',
       customer_name: 'josnny'
     },
-    redirect_url: `${DOMAIN}/success-payment`,
+    redirect_url: `${DOMAIN}success-payment`,
     cancel_url: `${DOMAIN}cancel-payment`
   };
  const charge = await Charge.create(chargeData);
