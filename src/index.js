@@ -76,7 +76,7 @@ app.get('/success-payment',(req,res)=>{
   res.send('payment completed')
 })
 
-app.get('/cancel-payment',(req,res)=>{
+app.get('cancel-payment',(req,res)=>{
   res.send('payment canceled')
 })
 
