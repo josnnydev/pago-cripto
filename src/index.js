@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv/config");
 const morgan = require('morgan')
+const path = require('path')
 
 const app = express();
 const port = process.env.PORT || 3001
@@ -18,6 +19,7 @@ app.use(express.json({
     req.rawBody = buf
   }
 }))
+app.use(express.static(path.join(__dirname, "public")));
 
 Client.init(COINBASE_API_KEY);
 const { Charge } = resources;
