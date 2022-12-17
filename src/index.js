@@ -38,7 +38,7 @@ app.get("/create-charge", async (req, res) => {
       customer_name: 'josnny'
     },
     redirect_url: `${DOMAIN}/success-payment`,
-    cancel_url: `${DOMAIN}/cancel-payment`
+    cancel_url: `${DOMAIN}cancel-payment`
   };
  const charge = await Charge.create(chargeData);
  res.send(charge)
@@ -76,7 +76,7 @@ app.get('/success-payment',(req,res)=>{
   res.send('payment completed')
 })
 
-app.get('cancel-payment',(req,res)=>{
+app.get('/cancel-payment',(req,res)=>{
   res.send('payment canceled')
 })
 
