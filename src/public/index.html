@@ -24,7 +24,7 @@
       const data = await response.json()
 
       console.log(data)
-      // pay.innerHTML = `<a href="${data.hosted_url}">Pay Now</a>`
+       pay.innerHTML = `<a href="${data.hosted_url}">Pay Now</a>`
       window.location.href = data.hosted_url
       
     })
