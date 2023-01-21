@@ -2,9 +2,11 @@ const express = require("express");
 require("dotenv/config");
 const morgan = require('morgan')
 const path = require('path')
+const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 3000
+app.use(cors())
 const {
   COINBASE_API_KEY,
   COINBASE_WEBHOOK_SECRET,
@@ -37,8 +39,8 @@ app.get("/create-charge", async (req, res) => {
       customer_id: 'id_1',
       customer_name: 'josnny'
     },
-    redirect_url: `${DOMAIN}success-payment`,
-    cancel_url: `${DOMAIN}cancel-payment`
+    redirect_url: `${DOMAIN}/success-payment`,
+    cancel_url: `${DOMAIN}/cancel-payment`
   };
  const charge = await Charge.create(chargeData);
  res.send(charge)
